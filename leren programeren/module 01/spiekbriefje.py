@@ -10,7 +10,7 @@ x =3 #like that
 woord = 'hallo' #kan ook met dubble koma
 
 # int = een getal zonder koma
-x = {69}
+z = {69}
 #flowt is een koma getal
 y = 4.20
 print ("deez") #print zet iets daar onder
@@ -31,5 +31,7 @@ print (x) #wow
 print("Enter your name:")
 x = input()
 print("Hello, " + x)
-#aantal_pennenkoeken = int ('aapje)
-#
+#aantal_pennenkoeken = int
+#git add .
+# git commit -a -m "worrd"
+#git push
