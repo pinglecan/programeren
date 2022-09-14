@@ -35,3 +35,5 @@ print("Hello, " + x)
 #git add .
 # git commit -a -m "worrd"
 #git push
+
+#int(input('bla bla bla')) om van een input een int te maken
