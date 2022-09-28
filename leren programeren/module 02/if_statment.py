@@ -4,18 +4,16 @@ b = int(input('geef nog een ander heel nummer  '))
 
 
 if a > b:
-    max = a
-    min = b
-    print(f'a is het grootste getal:{max}')
-    print(f'Het minimum is:{min}')
-    print(f'het maximum is {max}')
+    Max = a
+    Min = b
+    print(f'a is het grootste getal:{Max}')
 elif a < b :
-    min = a
-    max = b
-    print(f'a is het kleinste getal:{min}')
-    print(f'Het minimum is:{min}')
-    print(f'het maximum is {max}')
+    Min = a
+    Max = b
+    print(f'a is het kleinste getal:{Min}')
 else: 
     print(f'a en b zijn even groot')
-    min = a
-    print(f'Het minimum en het maximum zijn:{min}')
+    Min = a
+    Max = b
+print(f'Het minimum is:{Min}')
+print(f'het maximum is {Max}')

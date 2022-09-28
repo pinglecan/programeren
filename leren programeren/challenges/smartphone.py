@@ -27,4 +27,4 @@ elif iphone_prijs > buget and samsung_prijs > buget:
         print(f'de iphone is het goedkoopst, de telefoon kost: {iphone_prijs} euro ')
         print ('het advies is koop geen telefoon ze zijn allemaal te duur.')
     else :
-        print(f'bijde telefoons kosten {iphone_prijs} dus het advies is koop geen telefoon')
+        print(f'beide telefoons kosten {iphone_prijs} dus het advies is koop geen telefoon')

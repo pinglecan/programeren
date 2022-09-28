@@ -8,12 +8,18 @@ try:
 except :
     print('Voer een getal in als nummer')
     exit()
-mediumaantal=int(input('hoe veel medium pizzas wilt u?  '))
-mediumprijs = medium * mediumaantal
-
-largeaantal=int(input('hoe veel large pizzas wilt u?  '))
-largeprijs = large * largeaantal
-
+try:
+    mediumaantal=int(input('hoe veel medium pizzas wilt u?  '))
+    mediumprijs = medium * mediumaantal
+except:
+    print('voer een getal in als numer')
+    exit()
+try:
+    largeaantal=int(input('hoe veel large pizzas wilt u?  '))
+    largeprijs = large * largeaantal
+except:
+    print('voer een getal in als numer')
+    exit()
 
 print('')
 print('')
