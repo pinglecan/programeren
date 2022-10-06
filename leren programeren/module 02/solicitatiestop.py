@@ -1,9 +1,9 @@
 snor_of_haar = False
-naam = input(' wat is je naam')
-if naam == 'garry' or ' deeznuts':
-    raise NameError('not funny didn t laugh')
-geslacht = input('bent u een man of een vrouw?  ').lower()
 
+naam = input('wat is je naam?').lower()
+if naam == 'garry' or naam == 'deez nuts':
+    raise NameError('Ew cringe')
+geslacht = input('bent u een man of een vrouw?  ').lower()
 
 dieren_dressuur = int(input('Hoeveel jaar praktijkervaring heeft u met dieren-dressuur?  '))
 jongleren = int(input('hoeveel jaar ervaring jongleren heeft u?  ').lower())
@@ -28,8 +28,8 @@ elif geslacht == "man":
         breed_snor = int(input('hoe breed is uw snor in cm?  ').lower())
         if breed_snor >= 10: snor_of_haar = True
 Overleven_met_gevaarlijk_personeel = input('Heeft u het Certificaat Overleven met gevaarlijk personeel?  ').lower()
-femboy = input(' ben je een femboy?')
-if femboy == ' ja':
+femboy = input('ben je een femboy?')
+if femboy == 'ja':
     raise NameError('THERE CAN BE ONLY ONE')
 if dieren_dressuur >= 4 or jongleren >= 5 or acrobatiek >=3:
     if diploma =='ja' and rijbewijs == 'ja' and hoge_hoed == 'ja' and snor_of_haar == True and lengte > 150 and dik > 90 and Overleven_met_gevaarlijk_personeel == 'ja':
