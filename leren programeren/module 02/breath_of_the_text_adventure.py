@@ -1,20 +1,27 @@
 import random
+import os
 import time
+from turtle import clear
+
 #shit is false lmao
-weapon_axe = False
+weapon_axe = 0
 armor_programming_socks = False
-weapon_black_sword = False
-weapon_2swords = False
-weapon_shield = False
+weapon_black_sword = 0
+weapon_2swords = 0
+weapon_shield = True
 armor_royal_guards_armor = False
 item_food = False
-weapon_sword = False
-weapon_flamesword = False
+weapon_sword = 0
+weapon_flamesword = 0
 # function to print with delay
-def printDelay(t: str, d=2):
+def printDelay(t: str, d=0):
     time.sleep(d)
     print(t)
+#os clear
+def clear_console():
+    os.system('cls')
 #the game begining
+clear_console()
 printDelay('You wake up in a ancient temple you don’t rember anything you walk out into a bright light')
 man_or_forest = input('You hear a voice of a woman telling you you have been sleep for the past 100 years you see a old man in the distence do you go towards him Y/N?  ').lower()
 if man_or_forest == 'yes' or man_or_forest == 'y':
@@ -23,7 +30,7 @@ if man_or_forest == 'yes' or man_or_forest == 'y':
     printDelay('you talk to him for a bit then you walk towards a old building ')
     axe = input('You see a axe in the discence do you pick it up y/n  ').lower()
     if axe == 'yes' or axe == 'y' :
-        weapon_axe = True
+        weapon_axe = 1
     else:
         printDelay('you did not pick up the axe')
     printDelay('You see a button and you press it a big tower emerges from under the building')
@@ -55,10 +62,10 @@ if man_or_forest == 'yes' or man_or_forest == 'y':
                 if open_chest == 'yes' or 'y':
                     printDelay('you got some programming socks')
                     armor_programming_socks = True
-                elif open_chest == 'no' or 'n':
+                elif open_chest == 'no' or open_chest == 'n':
                     printDelay('you did not open the chest')
-            elif ball_in_statue == 'no' or 'n':
-                printDelay('you did not open the chest')
+            elif ball_in_statue == 'no' or ball_in_statue == 'n':
+                printDelay('you did not use the orb')
             printDelay('The old man tells you to come up the later to the roof')
             printDelay('"well young one i think its time for me to tell you who i really am"')
             printDelay('"i was king rhoam bosphoramus hyrule i was the last king of hyrule ')
@@ -67,19 +74,19 @@ if man_or_forest == 'yes' or man_or_forest == 'y':
             printDelay('you see two posible ways to enter')
             printDelay('you can enter trough the front gate or you could enter via the water')
             #the castle
-            how_enter_castle = input('how will you enter?  ').lower
-            if how_enter_castle == 'water' or 'via the water' or 'via water' :
+            how_enter_castle = input('how will you enter?  ').lower()
+            if how_enter_castle == 'water' or how_enter_castle == 'via the water' or  how_enter_castle == 'via water' :
                 printDelay('You enter via the water you end up in the secret docking area of the castle you find a black sword')
-                weapon_black_sword = True
+                weapon_black_sword = 3
                 printDelay('you sneak your way through the palace')
                 printDelay('you see some guards in the armory you could fight them to get some armor')
-                armory_or_boss = input('do you fight them or do you keep walking?  ')
-                if armory_or_boss == 'fight' or 'fight them':
-                    sneak_or_head_water = input('do you sneak attack or do you fight them head on?  ')
+                armory_or_boss = input('do you fight them or do you keep walking?  ').lower()
+                if armory_or_boss == 'fight' or armory_or_boss =='fight them':
+                    sneak_or_head_water = input('do you sneak attack or do you fight them head on?  ').lower()
                     if sneak_or_head_water =='sneak' or sneak_or_head_water =='sneak attack':
                         printDelay('you sneak attack the guards and they die ')
                         printDelay('you loot the armory you got 2 swords a shield and some royal guards armor nice')
-                        weapon_2swords = True
+                        weapon_2swords = 4
                         weapon_shield = True
                         armor_royal_guards_armor = True
                     elif sneak_or_head_water == 'head on' or sneak_or_head_water =='attack head on' or sneak_or_head_water=='fight head on':
@@ -93,18 +100,21 @@ if man_or_forest == 'yes' or man_or_forest == 'y':
                         exit('dumb ass')
                     printDelay('then you walk to the boss room')
                     printDelay('you enter the boss room')
-            elif how_enter_castle == 'front gate' or how_enter_castle == 'gate':
+            elif how_enter_castle == 'gate' or how_enter_castle == 'front gate' or how_enter_castle == 'via the front gate':
                 printDelay('You quickly run towards the first entrance  into the castle you see you are in the dining room and find some food so you can heal')
                 item_food = True
-                printDelay('You also see a sword you take it with you')
-                weapon_sword = True
+                kitchen_sword = input('You also see a sword do take it with you? Y/N  ').lower()
+                if kitchen_sword== 'y' or kitchen_sword =='yes' :
+                    weapon_sword = 2
+                else :
+                    printDelay('you did not take the sword with you')
                 printDelay('you walk further and see the boss room')
                 printDelay('but to the felt of you you see a strong looking sword but there is a guard')
-                weapon_or_boss=input('do you go for the weapon or do you go to the boss room?  ')
-                if weapon_or_boss == 'boss room' or 'go to boss room':
+                weapon_or_boss=input('do you go for the weapon or do you go to the boss room?  ').lower()
+                if weapon_or_boss == 'boss room' or weapon_or_boss == 'go to boss room':
                     printDelay('you walk to the boss room')
                 elif weapon_or_boss == 'weapon' or weapon_or_boss =='go to weapon':
-                    sneak_or_head_gate =input('do you fight him head on or do you sneak attack him')
+                    sneak_or_head_gate =input('do you fight him head on or do you sneak attack him?  ').lower()
                     if sneak_or_head_gate == 'fight him head on' or sneak_or_head_gate == 'fight head on' or sneak_or_head_gate == 'head on':
                         printDelay('you decide to fight him head on')
                         printDelay('but he is a lot stronger then you')
@@ -113,7 +123,7 @@ if man_or_forest == 'yes' or man_or_forest == 'y':
                     elif sneak_or_head_gate == 'sneak' or sneak_or_head_gate == 'sneak attack' or sneak_or_head_gate == 'sneak attack him':
                         printDelay('you sneak attack the guard and he dies')
                         printDelay('you pick up the flaming sword')
-                        weapon_flamesword = True
+                        weapon_flamesword = 4
                         printDelay(' now you walk to the boss room')
                     else:
                         printDelay('i gave you the options how did you mess that up')
@@ -139,7 +149,7 @@ elif man_or_forest == 'n' or man_or_forest == 'no':
     printDelay('you decide to not go to the old man and you go into the forest')
     printDelay('after wandering in the forest for a while you find yourself near a kamp of bokoblins')
     talus_or_boko =input('they spot you and ready there weapons do you fight or flee?  ').lower()
-    if talus_or_boko == 'fight' or 'fight them':
+    if talus_or_boko == 'fight' or talus_or_boko == 'fight them':
         printDelay('you ready yourself for a fight sadly enough one of them has a bow and shoots you in the heart')
         printDelay('you fall to the ground and die')
         printDelay('ending 1 boko death')
@@ -160,4 +170,121 @@ else:
     printDelay('i gave you the options how did you mess that up')
     printDelay('ending 9 you put in a un usable comand')
     exit('dumb ass')
-printDelay('boss test 123 test')
+#the bossssssssss scarry
+#####################################################
+clear_console()
+print('____________________________________________________________')
+printDelay('you ready your weapon for a fight ganon apears infront of you a giant creepy mess made of pure evil')
+printDelay('lets see of you can beat him')
+
+if weapon_2swords == 0 and weapon_axe == 0 and weapon_black_sword == 0 and weapon_flamesword == 0 and weapon_sword == 0:
+    printDelay('... all you have is a stick a damm stick?')
+    printDelay('no way you can beat ganon but you can try')
+    hit1 = random.randint(1,100)
+    try:
+        player_hit1 =int(input('type a number between 1 and 100  '))
+    except:
+        print('dat is geen numer voer een numer in')
+        print('het numer is nu 69')
+        player_hit1 = 69
+    if hit1 != player_hit1:
+        printDelay('you missed and died because you only had a stick')
+        printDelay('ending 7 died to the boss')
+    elif hit1 == player_hit1:
+        printDelay('you beat the living shit out of ganon using only a fucking stick')
+        printDelay('he was begging you to stop but you didnt you defeated ganon using only a stick congrats')
+        printDelay('secret ending stick kill')
+        exit()
+else :
+    hit_chance = 13 - weapon_2swords - weapon_axe - weapon_black_sword - weapon_flamesword -weapon_sword
+    stap = 5
+    while stap != 0:
+        if stap == 5:
+            printDelay('HIT! he took a lot of damage')
+            hit3 = random.randint(1,hit_chance)
+            try:
+                player_hit3 = int(input(f'type a number between 1 and {hit_chance}  '))
+            except:
+                printDelay('dat is geen nummer')
+                printDelay('het numer is nu 2')
+                player_hit3 = 2
+            if hit3 == player_hit3:
+                stap = 7
+        elif stap == 7:
+            printDelay('gannon falls to the ground')
+            printDelay('you did it you defeated ganon and saved the princes')
+            printDelay('you won congrats!')
+            stap = 0
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    
+# hit1 = random.randint(1,hit_chance)
+# player_hit1 = int(input(f'type a number between 1 and {hit_chance}  '))
+# if hit1 == player_hit1 :
+#     printDelay('Hit! he took a lot of damage')
+#     hit2 = random.randint(1,hit_chance)
+#     player_hit2 = int(input(f'type a number between 1 and {hit_chance}  '))
+#     if hit2 == player_hit2:
+#         printDelay('HIT! he took a lot of damage')
+#         hit3 = random.randint(1,hit_chance)
+#         try:
+#             player_hit3 = int(input(f'type a number between 1 and {hit_chance}  '))
+#         except:
+#             printDelay('dat is geen nummer')
+#             printDelay('het numer is nu 2')
+#             player_hit3 = 2
+#         if hit3 == player_hit3:
+#             printDelay('gannon falls to the ground')
+#             printDelay('you did it you defeated ganon and saved the princes')
+#             printDelay('you won congrats!')
+#         else :
+#             printDelay('you missed and ganon killed you')
+#             printDelay('ending 7 died to ganon')
+#             exit()
+#     elif hit2 != player_hit2:
+#         printDelay('you got hit')
+#         if armor_royal_guards_armor == True or armor_programming_socks == True:
+#             printDelay('luckly your armor took the blow')
+#             hit3 = random.randint(1,hit_chance)
+#         try:
+#             player_hit3 = int(input(f'type a number between 1 and {hit_chance}  '))
+#         except:
+#             printDelay('dat is geen nummer')
+#             printDelay('het numer is nu 2')
+#             player_hit3 = 2
+#             if hit3 == player_hit3:
+#                 printDelay('gannon falls to the ground')
+#                 printDelay('you did it you defeated ganon and saved the princes')
+#                 printDelay('you won congrats!')
+#         else :
+#             printDelay('you missed and ganon killed you')
+#             printDelay('ending 7 died to ganon')
+#             exit()    
+    
+
+
+# elif hit1 != player_hit1:
+#     printDelay('you missed')
+#     if item_food == True or weapon_shield == True:
+#         printDelay('But you had some thing to stop yourself from dying')
+
+#     elif item_food == False and weapon_sword == False:
+#         printDelay('and ganon attacks you and you die')
+#         printDelay('ending 7 you died to ganon')
+#         exit()
