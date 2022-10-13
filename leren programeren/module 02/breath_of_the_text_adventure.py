@@ -14,7 +14,7 @@ item_food = False
 weapon_sword = 0
 weapon_flamesword = 0
 # function to print with delay
-def printDelay(t: str, d=0):
+def printDelay(t: str, d=2):
     time.sleep(d)
     print(t)
 #os clear
@@ -197,10 +197,47 @@ if weapon_2swords == 0 and weapon_axe == 0 and weapon_black_sword == 0 and weapo
         exit()
 else :
     hit_chance = 13 - weapon_2swords - weapon_axe - weapon_black_sword - weapon_flamesword -weapon_sword
-    stap = 5
+    stap = 1
     while stap != 0:
-        if stap == 5:
-            printDelay('HIT! he took a lot of damage')
+        if stap == 1:
+            hit1 = random.randint(1,hit_chance)
+            try:
+                player_hit1 = int(input(f'type a number between 1 and {hit_chance}  '))
+            except:
+                printDelay('dat is geen nummer')
+                printDelay('het numer is nu 2')
+                player_hit1 = 1
+            if hit1 == player_hit1 :
+                printDelay('Hit! he took a lot of damage')
+                stap = 3
+            elif hit1 != player_hit1 and weapon_shield == True or item_food == True:
+                stap = 2
+            elif hit1 != player_hit1 and weapon_shield == False and item_food == False:
+                stap = 6
+        elif stap == 2:
+            printDelay('you missed')
+            printDelay('But you had some thing to stop yourself from dying')
+            stap = 3
+        elif stap == 3:
+            hit2 = random.randint(1,hit_chance)
+            try:
+                player_hit2 = int(input(f'type a number between 1 and {hit_chance}  '))
+            except:
+                printDelay('dat is geen nummer')
+                printDelay('het numer is nu 2')
+                player_hit2 = 2
+            if hit2 == player_hit2:
+                printDelay('HIT! he took a lot of damage')
+                stap = 5
+            elif hit2 != player_hit2 and (armor_programming_socks == True or armor_royal_guards_armor == True):
+                stap = 4
+            elif hit2 != player_hit2 and armor_programming_socks == False and armor_royal_guards_armor == False:
+                stap = 6
+        elif stap == 4:
+                printDelay('you got hit')
+                printDelay('luckly your armor took the blow')
+                stap = 5
+        elif stap == 5:
             hit3 = random.randint(1,hit_chance)
             try:
                 player_hit3 = int(input(f'type a number between 1 and {hit_chance}  '))
@@ -210,81 +247,14 @@ else :
                 player_hit3 = 2
             if hit3 == player_hit3:
                 stap = 7
+            elif hit3 != player_hit3:
+                stap = 6
+        elif stap == 6:
+                printDelay('ganon attacks you and you die')
+                printDelay('ending 7 you died to ganon')
+                exit()
         elif stap == 7:
             printDelay('gannon falls to the ground')
             printDelay('you did it you defeated ganon and saved the princes')
             printDelay('you won congrats!')
             stap = 0
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-    
-# hit1 = random.randint(1,hit_chance)
-# player_hit1 = int(input(f'type a number between 1 and {hit_chance}  '))
-# if hit1 == player_hit1 :
-#     printDelay('Hit! he took a lot of damage')
-#     hit2 = random.randint(1,hit_chance)
-#     player_hit2 = int(input(f'type a number between 1 and {hit_chance}  '))
-#     if hit2 == player_hit2:
-#         printDelay('HIT! he took a lot of damage')
-#         hit3 = random.randint(1,hit_chance)
-#         try:
-#             player_hit3 = int(input(f'type a number between 1 and {hit_chance}  '))
-#         except:
-#             printDelay('dat is geen nummer')
-#             printDelay('het numer is nu 2')
-#             player_hit3 = 2
-#         if hit3 == player_hit3:
-#             printDelay('gannon falls to the ground')
-#             printDelay('you did it you defeated ganon and saved the princes')
-#             printDelay('you won congrats!')
-#         else :
-#             printDelay('you missed and ganon killed you')
-#             printDelay('ending 7 died to ganon')
-#             exit()
-#     elif hit2 != player_hit2:
-#         printDelay('you got hit')
-#         if armor_royal_guards_armor == True or armor_programming_socks == True:
-#             printDelay('luckly your armor took the blow')
-#             hit3 = random.randint(1,hit_chance)
-#         try:
-#             player_hit3 = int(input(f'type a number between 1 and {hit_chance}  '))
-#         except:
-#             printDelay('dat is geen nummer')
-#             printDelay('het numer is nu 2')
-#             player_hit3 = 2
-#             if hit3 == player_hit3:
-#                 printDelay('gannon falls to the ground')
-#                 printDelay('you did it you defeated ganon and saved the princes')
-#                 printDelay('you won congrats!')
-#         else :
-#             printDelay('you missed and ganon killed you')
-#             printDelay('ending 7 died to ganon')
-#             exit()    
-    
-
-
-# elif hit1 != player_hit1:
-#     printDelay('you missed')
-#     if item_food == True or weapon_shield == True:
-#         printDelay('But you had some thing to stop yourself from dying')
-
-#     elif item_food == False and weapon_sword == False:
-#         printDelay('and ganon attacks you and you die')
-#         printDelay('ending 7 you died to ganon')
-#         exit()
