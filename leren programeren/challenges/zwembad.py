@@ -1,4 +1,7 @@
-zwembad_grond = 8 * 3 * 1.5
+lengte = float(input('hoe lang is het zwembad?  '))
+breedte = float(input('you breed is het zwembad?  '))
+diepte = float(input('hoe diep is het zwembad?  '))
+zwembad_grond = lengte * breedte * diepte
 kosten_uitgraven = zwembad_grond * 25
 kosten_afvoer_grond = zwembad_grond * 32.50
 voorrijkosten = 250 + (2.05 * 60)
