@@ -9,7 +9,7 @@ elif tegel_kleur == 'nee' or tegel_kleur == 'n':
 else:
     print('geen goede waarde tegel prijs is nu 69')
     tegel_prijs = 69
-vierkante_meter = (lengte * diepte * 2) + (breedte * diepte * 2) +(lengte * breedte)
+vierkante_meter = (lengte * diepte * 2) + (breedte * diepte * 2) + (lengte * breedte)
 beton_tegel = (vierkante_meter * 200) + (vierkante_meter * tegel_prijs)
 zwembad_grond = lengte * breedte * diepte
 kosten_uitgraven = zwembad_grond * 25
@@ -22,4 +22,4 @@ print(f'Uitgraven: €{kosten_uitgraven} ')
 print(f'Afvoeren grond: €{kosten_afvoer_grond}')
 print(f'voorrijkkosten: €{voorrijkosten}')
 print(f'beton + tegel ({vierkante_meter} m²) €{beton_tegel}')
-print(f'Totaal €{totaal}')
+print(f'Totaal €{totaal}')  
