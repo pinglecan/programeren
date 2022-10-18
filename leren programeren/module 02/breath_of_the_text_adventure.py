@@ -22,7 +22,7 @@ def clear_console():
     os.system('cls')
 #the game begining
 clear_console()
-printDelay('You wake up in a ancient temple you don’t rember anything you walk out into a bright light')
+print('You wake up in a ancient temple you don’t rember anything you walk out into a bright light')
 man_or_forest = input('You hear a voice of a woman telling you you have been sleep for the past 100 years you see a old man in the distence do you go towards him Y/N?  ').lower()
 if man_or_forest == 'yes' or man_or_forest == 'y':
     printDelay('you decide to go to the old man and talk to him you pick up a stick along the way becouse who doesn’t like sticks?')
