@@ -180,7 +180,7 @@ printDelay('lets see of you can beat him')
 if weapon_2swords == 0 and weapon_axe == 0 and weapon_black_sword == 0 and weapon_flamesword == 0 and weapon_sword == 0:
     printDelay('... all you have is a stick a damm stick?')
     printDelay('no way you can beat ganon but you can try')
-    hit1 = random.randint(1,100)
+    hit1 = random.randint(0,101)
     try:
         player_hit1 =int(input('type a number between 1 and 100  '))
     except:

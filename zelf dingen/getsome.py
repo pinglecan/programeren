@@ -79,6 +79,7 @@ while reapear == True:
                 elif yes_or_no_bitches == 6:
                     print('With your charisma even a rock would say no.')
                 bitches = 'done'
+                reapear = False
     elif bitches == 'yes':
         print('congratts man you have some bitches')
         print('no need to do this then')
@@ -140,7 +141,7 @@ while reapear == True:
         elif dumb == True:
             dumb_precent = 0
             while dumb == True:
-                dumb_precent_plus = random.randint(1, 50)
+                dumb_precent_plus = random.randint(3, 8)
                 dumb_precent = dumb_precent + dumb_precent_plus
                 print(f'downloading zipbombwarrior.zip {dumb_precent}%')
                 time.sleep(1)
