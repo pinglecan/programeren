@@ -4,7 +4,7 @@ from turtle import clear
 import time
 reapear = True
 dumb = False
-os.system
+os.system('cls')
 while reapear == True:
     bitches = input('do you curently have any bitches?  ').lower()
     if bitches == 'no':
