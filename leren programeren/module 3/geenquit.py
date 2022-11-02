@@ -6,4 +6,4 @@ aantal_keer = 0
 while vraagteken != 'quit':
     vraagteken = input('?  ')
     aantal_keer += 1
-    print(aantal_keer)
+    print(aantal_keer) 

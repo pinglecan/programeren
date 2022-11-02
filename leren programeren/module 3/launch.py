@@ -4,7 +4,7 @@ def printDelay(t: str, d=1):
     print(t)
 
 for launch in range (0,31)[::-1]:
-    printDelay (launch)
+  printDelay (launch)
 printDelay('LIFT OFF!!')
 print('''
                                                                                                     
