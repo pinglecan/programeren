@@ -1,6 +1,3 @@
-sum = 0
-for c in range(5):
-    sum = sum +c
-print(c)
-
-print(sum)
+var2 =5
+var2 += 7
+print(var2)
