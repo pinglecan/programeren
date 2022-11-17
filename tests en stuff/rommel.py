@@ -1,3 +1,2 @@
-var2 =5
-var2 += 7
-print(var2)
+vershil = 20 - 50 
+print(vershil)

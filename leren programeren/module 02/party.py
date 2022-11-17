@@ -1,6 +1,3 @@
-from re import T
-
-
 gastheer= input('Wat is uw naam?  ').lower()
 gasten = 12
 drank = True
