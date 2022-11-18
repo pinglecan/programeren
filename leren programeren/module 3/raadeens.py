@@ -40,4 +40,3 @@ while game != 20 and stop == False:
             print('volgende ronde')         
     else:
         print('bedankt')
-    
