@@ -5,7 +5,7 @@ print('')
 for i in range(5, 7):
     print(allendagen[i])
 print('')
-for i in range(0,7)[::-1] :
+for i in range(5,-1,-1):
     print(allendagen[i])
 print('')
 for i in range(0,5)[::-1]:
