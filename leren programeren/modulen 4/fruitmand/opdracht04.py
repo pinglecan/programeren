@@ -1,7 +1,12 @@
 from fruitmand import fruitmand
 import random
+a = -1
+user_input = int(input("Hoeveel: "))
 
-random_user_int = int(input('geef een getal  '))
-for i in range(random_user_int):
-    random_fruit = random.randint(0,fruitmand)
-    print(fruitmand)
+for i in fruitmand:
+    a += 1
+
+
+for i in range(0, user_input):
+    random_fruit = random.randint(0, a)
+    print(fruitmand[random_fruit]['name'])
