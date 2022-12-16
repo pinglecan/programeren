@@ -9,7 +9,8 @@ fruitmand.append({
 })
 
 for entry in fruitmand:
-    if entry['weight'] > 0:
+    if entry['weight']:
         total_weight_fruit += entry['weight']
 
 print(total_weight_fruit)
+print(fruitmand)
