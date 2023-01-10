@@ -13,4 +13,3 @@ for entry in fruitmand:
         total_weight_fruit += entry['weight']
 
 print(total_weight_fruit)
-print(fruitmand)

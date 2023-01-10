@@ -1,0 +1,60 @@
+body{
+    background-color: indigo;
+    color: wheat;
+}
+p{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.portable, .medium, .big{
+    display: none;
+}
+@media screen and (min-width: 576px){
+    body{
+        background-color: wheat;
+        color: orangered;
+    }
+
+    .portable{
+        display: block;
+        font-size:x-large;
+    }
+    .medium, .big, .pingle_sized{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 760px) {
+    body{
+        background-color: black;
+        color: whitesmoke;
+    }
+
+    .medium{
+        display: block;
+        font-size: xx-large;
+    }
+    .big, .pingle_sized, .portable{
+        display: none;
+    }
+}
+
+@media  screen and (min-width: 1060px) {
+    body{
+        background-color:deepskyblue ;
+        color: green;
+    }
+
+    .big{
+        display: block;
+        font-size: 400px;
+    }
+    .medium, .pingle_sized, .portable{
+        display: none;
+    }
+}
