@@ -1,10 +1,17 @@
 def naam_leeftijd(x: list):
-    ghk = {}
-    userimput_naam = input('wat is uw naam ')
-    userimput_leeftijd = int(input('wat is uw leeftijd '))
-    ghk.update('naam' : userimput_naam, 'leeftijd' : userimput_leeftijd)
-    return x
+    print('als u wilt stoppen type stop om the stoppen')
+    userinput_naam = input('wat is uw naam ').lower
+    userinput_leeftijd = input('wat is uw leeftijd ').lower
+    namen_en_leeftijden.append({
+    'naam' : userinput_naam,
+    'leeftijd' : userinput_leeftijd
+    })
+    if userinput_leeftijd or userinput_naam == 'stop':
+        return x
 
 namen_en_leeftijden = []
-
-print(naam_leeftijd(namen_en_leeftijden))
+for entry in namen_en_leeftijden:
+    naam_leeftijd(namen_en_leeftijden)
+    if entry['naam'] == 'stop'or entry['leeftijd'] == 'stop':
+        break
+print(namen_en_leeftijden)
