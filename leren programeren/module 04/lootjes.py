@@ -27,4 +27,4 @@ while not test:
         if list_met_namen_1[x] == list_met_namen_2[x]:
             test = False
 for x in range(0,len(list_met_namen_2)):
-    print(f'{list_met_namen_1[x]} heeft {list_met_namen_2[x]} getrtestken')
+    print(f'{list_met_namen_1[x]} heeft {list_met_namen_2[x]} getroken')
