@@ -7,15 +7,24 @@ def naam_leeftijd(x: list):
     'leeftijd' : userinput_leeftijd
     })
     if userinput_leeftijd or userinput_naam == 'stop':
-        exit()
         return x
 
 namen_en_leeftijden = []
 
 naam_leeftijd(namen_en_leeftijden)
 
-for entry in namen_en_leeftijden:
-    naam_leeftijd(namen_en_leeftijden)
-    if entry['naam'] == 'stop'or entry['leeftijd'] == 'stop':
-        break
+
 print(namen_en_leeftijden)
+
+
+
+
+
+
+
+
+# for entry in namen_en_leeftijden:
+#     naam_leeftijd(namen_en_leeftijden)
+#     if entry['naam'] == 'stop'or entry['leeftijd'] == 'stop':
+#         break
+
