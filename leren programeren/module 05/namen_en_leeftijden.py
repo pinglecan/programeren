@@ -15,16 +15,3 @@ naam_leeftijd(namen_en_leeftijden)
 
 
 print(namen_en_leeftijden)
-
-
-
-
-
-
-
-
-# for entry in namen_en_leeftijden:
-#     naam_leeftijd(namen_en_leeftijden)
-#     if entry['naam'] == 'stop'or entry['leeftijd'] == 'stop':
-#         break
-
