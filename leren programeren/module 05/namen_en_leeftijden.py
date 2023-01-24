@@ -17,7 +17,6 @@ while not stop:
     stoppen =input('Toets enter om door te gaan of stop om te printen  ').lower()
     if stoppen == 'stop':
         stop = True
-print(namen_en_leeftijden)
 
 for naam in namen_en_leeftijden:
-    print(naam['naam'])
+    print(f'{naam["naam"]} is {naam["leeftijd"]}')
