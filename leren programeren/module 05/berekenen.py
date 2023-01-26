@@ -1,21 +1,17 @@
 def plus(number1: float, number2: float):
-    print(f"{number1} + {number2} = {float(number1) + float(number2)}")
     return number1 + number2
 
 
 def min(number1: float, number2: float):
-    print(f"{number1} - {number2} = {float(number1) - float(number2)}")
     return number1 -number2
 
 
 
 def keer(number1: float, number2: float):
-    print(f"{number1} * {number2} = {float(number1) * float(number2)}")
     return number1 * number2
 
 
 def delen(number1: float, number2: float):
-    print(f"{number1} / {number2} = {float(number1) / float(number2)}")
     return number1 / number2
 
 user_input = 0
