@@ -1,13 +1,14 @@
-def naam_leeftijd(x: list):
+def naam_leeftijd(dictionairy: list):
     userinput_naam = input('wat is uw naam ').lower()
     userinput_leeftijd = input('wat is uw leeftijd ').lower()
-    namen_en_leeftijden.append({
+    dictionairy ={
     'naam' : userinput_naam,
     'leeftijd' : userinput_leeftijd
-    })
-    return x
+    }
+    return dictionairy
 
 namen_en_leeftijden = []
+
 
 
 stop = False
