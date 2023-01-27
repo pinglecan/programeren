@@ -1,6 +1,7 @@
-def tafel(x):
-    for keer in range(1,11):
-        print(f'{keer} x {x} = {x * keer}')
+def tafel(tafel_van):
+    som = ''
+    for keer in range(1,10):
+        som += f'{keer} x {tafel_van} = {tafel_van * keer}\n'
+    return som
 
-
-tafel(int(input('Van welk getal wilt u de tafel zien? ')))
+print(tafel(int(input('Van welk getal wilt u de tafel zien? '))))
