@@ -1,6 +1,7 @@
-def fibonacci(x):
+def fibonacci(aantal_numers):
+    aantal_numers -= 2
     lijst = [0,1]
-    for fib in range(x):
+    for fib in range(aantal_numers):
         lijst.append(lijst[-1] + lijst[-2])
     return lijst
 
