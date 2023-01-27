@@ -1,14 +1,13 @@
-def naam_leeftijd(dictionairy: list):
+def naam_leeftijd(x: list):
     userinput_naam = input('wat is uw naam ').lower()
     userinput_leeftijd = input('wat is uw leeftijd ').lower()
-    dictionairy ={
+    namen_en_leeftijden.append({
     'naam' : userinput_naam,
     'leeftijd' : userinput_leeftijd
-    }
-    return dictionairy
+    })
+    return x
 
 namen_en_leeftijden = []
-
 
 
 stop = False
@@ -20,4 +19,4 @@ while not stop:
         stop = True
 
 for naam in namen_en_leeftijden:
-    print(f'{naam["naam"]} is {naam["leeftijd"]}')
+    print(f'{naam["naam"]} is {naam["leeftijd"]} jaar')
