@@ -17,19 +17,6 @@ def delen(number1: float, number2: float):
 user_input = 0
 another_round = True
 
-
-promt = """wat te doen?
-    |     A) getallen optellen
-    |     B) getallen aftrekken
-    |     C) getallen vermenigvuldigen
-    |     D) getallen delen
-    |     E) getal ophogen
-    |     F) getal verlagen
-    |     G) getal verdubbelen
-    |     H) getal halveren"""
-
-
-
 while another_round:
     choice = input("""wat te doen?
     |     A) getallen optellen
