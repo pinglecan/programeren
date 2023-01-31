@@ -6,6 +6,9 @@ def naam_leeftijd(x: list):
     'leeftijd' : userinput_leeftijd
     }
 
+
+print(naam_leeftijd())
+
 namen_en_leeftijden = []
 
 
