@@ -104,6 +104,8 @@ while repeat_game == True:
                             printDelay('you decide to fight the guard head on')
                             printDelay('sadly enough the guards are way stronger then you so you die')
                             printDelay('ending 6 died to the guards in the armory')
+                            points = weapon_2swords + weapon_axe + weapon_black_sword + weapon_flamesword + weapon_sword 
+                            printDelay(f'you got {points} points!')
                             play_again = input('do you wanna play again Y/N  ').lower()
                             if input == 'y':
                                 continue
@@ -112,6 +114,7 @@ while repeat_game == True:
                         else:
                             printDelay('i gave you the options how did you mess that up')
                             printDelay('ending 9 you put in a un usable comand')
+                            play_again = input('do you wanna play again Y/N  ').lower()
                             if input == 'y':
                                 continue
                             else:
@@ -137,6 +140,7 @@ while repeat_game == True:
                             printDelay('you decide to fight him head on')
                             printDelay('but he is a lot stronger then you')
                             printDelay('ending 5 you died to a guard')
+                            play_again = input('do you wanna play again Y/N  ').lower()
                             if input == 'y':
                                 continue
                             else:
@@ -149,6 +153,7 @@ while repeat_game == True:
                         else:
                             printDelay('i gave you the options how did you mess that up')
                             printDelay('ending 9 you put in a un usable comand')
+                            play_again = input('do you wanna play again Y/N  ').lower()
                             if input == 'y':
                                 continue
                             else:
@@ -156,6 +161,7 @@ while repeat_game == True:
                 else:
                         printDelay('i gave you the options how did you mess that up')
                         printDelay('ending 9 you put in a un usable comand')
+                        play_again = input('do you wanna play again Y/N  ').lower()
                         if input == 'y':
                             continue
                         else:
@@ -163,6 +169,7 @@ while repeat_game == True:
             else:
                 printDelay('a trapdoor opens under you and you all to your death')
                 printDelay('ending 4 you failed the puzel')
+                play_again = input('do you wanna play again Y/N  ').lower()
                 if input == 'y':
                     continue
                 else:
@@ -170,6 +177,7 @@ while repeat_game == True:
         elif run_or_fight_guardian == 'fight' or run_or_fight_guardian == 'fight it':
             printDelay('you grab your weapon and run towards it to fight it sadly enough it shoots a lazer killing you before you can even reach it')
             printDelay('ending 3 you died to the guardian lmao')
+            play_again = input('do you wanna play again Y/N  ').lower()
             if input == 'y':
                 continue
             else:
@@ -177,7 +185,11 @@ while repeat_game == True:
         else:    
             printDelay('i gave you the options how did you mess that up')
             printDelay('ending 9 you put in a un usable comand')
-            exit('dumb ass')
+            play_again = input('do you wanna play again Y/N  ').lower()
+            if input == 'y':
+                continue
+            else:
+                exit()
     elif man_or_forest == 'n' or man_or_forest == 'no':
         printDelay('you decide to not go to the old man and you go into the forest')
         printDelay('after wandering in the forest for a while you find yourself near a kamp of bokoblins')
@@ -186,7 +198,11 @@ while repeat_game == True:
             printDelay('you ready yourself for a fight sadly enough one of them has a bow and shoots you in the heart')
             printDelay('you fall to the ground and die')
             printDelay('ending 1 boko death')
-            exit()
+            play_again = input('do you wanna play again Y/N  ').lower()
+            if input == 'y':
+                continue
+            else:
+                exit()
         elif talus_or_boko == 'flee' or talus_or_boko == 'run away':
             printDelay('you run away deeper into the forest')
             printDelay('you eventualy end up in a stony area and sit down on a stone')
@@ -194,15 +210,27 @@ while repeat_game == True:
             printDelay('it turns out you sat down on a stone stone talus and its not happy')
             printDelay('it smashes you with its giant stone hands and you die')
             printDelay('ending 2 stone talus')
-            exit()
+            play_again = input('do you wanna play again Y/N  ').lower()
+            if input == 'y':
+                continue
+            else:
+                exit()
         else:
             printDelay('i gave you the options how did you mess that up')
             printDelay('ending 9 you put in a un usable comand')
-            exit('dumb ass')
+            play_again = input('do you wanna play again Y/N  ').lower()
+            if input == 'y':
+                continue
+            else:
+                exit()
     else:
         printDelay('i gave you the options how did you mess that up')
         printDelay('ending 9 you put in a un usable comand')
-        exit('dumb ass')
+        play_again = input('do you wanna play again Y/N  ').lower()
+        if input == 'y':
+            continue
+        else:
+            exit()
     #the bossssssssss scarry
     #####################################################
     clear_console()
@@ -223,11 +251,21 @@ while repeat_game == True:
         if hit1 != player_hit1:
             printDelay('you missed and died because you only had a stick')
             printDelay('ending 7 died to the boss')
+            play_again = input('do you wanna play again Y/N  ').lower()
+            if input == 'y':
+                continue
+            else:
+                exit()
+
         elif hit1 == player_hit1:
             printDelay('you beat the living shit out of ganon using only a fucking stick')
             printDelay('he was begging you to stop but you didnt you defeated ganon using only a stick congrats')
             printDelay('secret ending stick kill')
-            exit()
+            play_again = input('do you wanna play again Y/N  ').lower()
+            if input == 'y':
+                continue
+            else:
+                exit()
     else :
         hit_chance = 13 - weapon_2swords - weapon_axe - weapon_black_sword - weapon_flamesword -weapon_sword
         stap = 1
@@ -285,7 +323,11 @@ while repeat_game == True:
             elif stap == 6:
                     printDelay('ganon attacks you and you die')
                     printDelay('ending 7 you died to ganon')
-                    exit()
+                    play_again = input('do you wanna play again Y/N  ').lower()
+                    if input == 'y':
+                        continue
+                    else:
+                        exit()
             elif stap == 7:
                 printDelay('gannon falls to the ground')
                 printDelay('you did it you defeated ganon and saved the princes')
