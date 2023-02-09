@@ -6,12 +6,12 @@ from turtle import clear
 #shit is false
 
 
-
+points = 0
 weapon_axe = 0
 armor_programming_socks = False
 weapon_black_sword = 0
 weapon_2swords = 0
-weapon_shield = True
+weapon_shield = False
 armor_royal_guards_armor = False
 item_food = False
 weapon_sword = 0
@@ -29,6 +29,17 @@ def clear_console():
     os.system('cls')
 
 
+# restart or exit game 
+def restart():
+    printDelay(f'you got {points} points!')
+    play_again = input('do you wanna play again Y/N  ').lower()
+    if input == 'y':
+        continue
+    else:
+        exit()
+
+
+
 #the game begining
 
 while repeat_game == True:
@@ -42,6 +53,7 @@ while repeat_game == True:
         axe = input('You see a axe in the discence do you pick it up y/n  ').lower()
         if axe == 'yes' or axe == 'y' :
             weapon_axe = 1
+            points +=1
         else:
             printDelay('you did not pick up the axe')
         printDelay('You see a button and you press it a big tower emerges from under the building')
@@ -50,6 +62,7 @@ while repeat_game == True:
         #puzzel and guardian
         run_or_fight_guardian = input('do you run away into the shrine or do you fight it?  ').lower()
         if run_or_fight_guardian == 'run away' or run_or_fight_guardian == 'run':
+            points+=1
             printDelay('You run into the shrine and escape from the things lazer there is a puzzel you must do you look around and see 4 stones on the floor')
             printDelay('a camel, elephant, lizard and a bird')
             printDelay('In the center of the room is a map with 4 places to put the stones')
@@ -58,6 +71,7 @@ while repeat_game == True:
             puzel_bird = input('In the cold mountain...').lower()
             puzel_elephant = input('In the raining swamp you put the...').lower()
             if puzel_bird == 'bird' and puzel_camel == 'camel' and puzel_elephant == 'elephant' and puzel_lizard == 'lizard':
+                points+=1
                 printDelay('the door infront of you opens')
                 printDelay('you find yourself in a treasure room with a orb in the middel ')
                 printDelay('you take the orb with you')
@@ -72,6 +86,7 @@ while repeat_game == True:
                     open_chest =input('there is a chest under the trap door do you open it? Y/N  ').lower()
                     if open_chest == 'yes' or 'y':
                         printDelay('you got some programming socks')
+                        points+=1
                         armor_programming_socks = True
                     elif open_chest == 'no' or open_chest == 'n':
                         printDelay('you did not open the chest')
@@ -95,6 +110,7 @@ while repeat_game == True:
                     if armory_or_boss == 'fight' or armory_or_boss =='fight them':
                         sneak_or_head_water = input('do you sneak attack or do you fight them head on?  ').lower()
                         if sneak_or_head_water =='sneak' or sneak_or_head_water =='sneak attack':
+                            points+=1
                             printDelay('you sneak attack the guards and they die ')
                             printDelay('you loot the armory you got 2 swords a shield and some royal guards armor nice')
                             weapon_2swords = 4
@@ -227,10 +243,13 @@ while repeat_game == True:
         printDelay('i gave you the options how did you mess that up')
         printDelay('ending 9 you put in a un usable comand')
         play_again = input('do you wanna play again Y/N  ').lower()
-        if input == 'y':
-            continue
-        else:
-            exit()
+        restart()
+
+
+
+
+
+            
     #the bossssssssss scarry
     #####################################################
     clear_console()
