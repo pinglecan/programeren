@@ -28,18 +28,6 @@ def printDelay(t: str, d=2):
 def clear_console():
     os.system('cls')
 
-
-# restart or exit game 
-def restart():
-    printDelay(f'you got {points} points!')
-    play_again = input('do you wanna play again Y/N  ').lower()
-    if input == 'y':
-        continue
-    else:
-        exit()
-
-
-
 #the game begining
 
 while repeat_game == True:
@@ -137,6 +125,7 @@ while repeat_game == True:
                                 exit()
                         printDelay('then you walk to the boss room')
                         printDelay('you enter the boss room')
+                        points+=1
                 elif how_enter_castle == 'gate' or how_enter_castle == 'front gate' or how_enter_castle == 'via the front gate':
                     printDelay('You quickly run towards the first entrance  into the castle you see you are in the dining room and find some food so you can heal')
                     item_food = True
@@ -243,7 +232,11 @@ while repeat_game == True:
         printDelay('i gave you the options how did you mess that up')
         printDelay('ending 9 you put in a un usable comand')
         play_again = input('do you wanna play again Y/N  ').lower()
-        restart()
+        if input == 'y':
+            continue
+        else:
+            exit()
+
 
 
 
