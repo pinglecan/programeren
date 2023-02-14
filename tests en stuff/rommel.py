@@ -38,8 +38,19 @@ def talus_fight():
             enemy_hit *= 100
         print(f'the stone talus hits for {enemy_hit} dmg')
         player_health -= enemy_hit        
-        sleep(0.7)
-        system('cls')
+        if player_health <= 0:
+            print('you died to the stone taulos')
+            print('ending 2 stone taulos death')
+            stap = 'stop'
+            sleep(1)
+        elif enemy_health <= 0:
+            print('you defeated the stone talus')
+            print('you win!')
+            sleep(2)
+            stap ='stop'
+        else:
+            sleep(0.7)
+            system('cls')
         
 
 
