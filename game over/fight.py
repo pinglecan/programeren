@@ -55,17 +55,12 @@ def talus_fight():
             system('cls')
         if turn == 3:
             battle_ui = f'''
-        |
-        |   Link  vs  stone talus
-        |
-        |
-        |   {player_health} hp   {enemy_health} hp
-        |
-        |   A( {weapon_stick} dmg
-        |
-        |   B( {weapon_bombs} dmg'''
-            
-
-
-
-talus_fight()
+            |
+            |   Link  vs  stone talus
+            |
+            |
+            |   {player_health} hp   {enemy_health} hp
+            |
+            |   A( {weapon_stick} dmg
+            |
+            |   B( {weapon_bombs} dmg'''
