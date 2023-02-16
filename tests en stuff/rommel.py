@@ -14,7 +14,7 @@ def talus_fight():
     stap = 'play'
 
     while stap == 'play':
-        battle_ui =  print(f'''
+        battle_ui =f'''
         |
         |   Link  vs  stone talus
         |
@@ -22,7 +22,9 @@ def talus_fight():
         |   {player_health} hp   {enemy_health} hp
         |
         |   A( {weapon_stick} dmg
-        |''')
+        |'''
+
+        print(battle_ui)
 
         player_dmg = input('        |   kies een aanval:  ').upper()
         turn+=1
@@ -52,6 +54,7 @@ def talus_fight():
             sleep(0.7)
             system('cls')
         if turn == 3:
+            battle_ui + f"|  B( {weapon_bombs} dmg"
             
 
 
