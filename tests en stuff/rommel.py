@@ -51,7 +51,8 @@ def talus_fight():
         else:
             sleep(0.7)
             system('cls')
-        
+        if turn == 3:
+            
 
 
 

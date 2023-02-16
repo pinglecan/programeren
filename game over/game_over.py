@@ -226,7 +226,7 @@ while repeat_game == True:
             printDelay('you eventualy end up in a stony area and sit down on a stone')
             printDelay('but the stone under you starts moving')
             printDelay('it turns out you sat down on a stone stone talus and its not happy')
-
+                #function go here
             printDelay('it smashes you with its giant stone hands and you die')
             printDelay('ending 2 stone talus')
             play_again = input('do you wanna play again Y/N  ').lower()

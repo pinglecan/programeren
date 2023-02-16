@@ -9,3 +9,5 @@ for x in range(1,5):
         for i in range(5):
             robotArm.moveLeft()
     robotArm.moveRight()
+    robotArm.speed(3)
+robotArm.wait()
