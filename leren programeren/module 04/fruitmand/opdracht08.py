@@ -12,4 +12,4 @@ for entry in fruitmand:
     if entry['weight']:
         total_weight_fruit += entry['weight']
 
-print(total_weight_fruit)
+print(entry)
