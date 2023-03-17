@@ -35,8 +35,9 @@ def getFromListByKeyIs(list:list, key:str, value:any) -> list:
 
     returnlist = []
     for entry in list:
-        if key == value:
-            returnlist.append(list)
+        if key in list == value:
+            returnlist.append(list[entry])
+            return returnlist
 
 def getAdventuringPeople(people:list) -> list:
     pass
