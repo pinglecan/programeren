@@ -32,11 +32,11 @@ def getJourneyFoodCostsInGold(people:int, horses:int) -> float:
 ##################### M04.D02.O5 #####################
 
 def getFromListByKeyIs(list:list, key:str, value:any) -> list:
-    niewlijstje = []
-    for tellen in range (0,len(list)):
-        if list[tellen][key] == value: 
-                niewlijstje.append(list[tellen])
-    return niewlijstje
+    returnlist = []
+    for entry in range (0,len(list)):
+        if list[entry][key] == value: 
+                returnlist.append(list[entry])
+    return returnlist
 
 def getAdventuringPeople(people:list) -> list:
     return getFromListByKeyIs(people,'adventuring',True)
@@ -45,11 +45,11 @@ def getShareWithFriends(friends:list) -> int:
     return getFromListByKeyIs(friends,'shareWith',True)
 
 def getAdventuringFriends(friends:list) -> list:
-    newlist= []
-    for teller in range (0,len(friends)):
-        if friends[teller]['adventuring'] and friends[teller]['shareWith']: 
-            newlist.append(friends[teller])
-    return newlist
+    returnlist= []
+    for entry in range (0,len(friends)):
+        if friends[entry]['adventuring'] and friends[entry]['shareWith']: 
+            returnlist.append(friends[entry])
+    return returnlist 
 
 ##################### M04.D02.O6 #####################
 

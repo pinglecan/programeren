@@ -64,3 +64,5 @@ def talus_fight():
             |   A( {weapon_stick} dmg
             |
             |   B( {weapon_bombs} dmg'''
+
+talus_fight()
