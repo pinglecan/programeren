@@ -7,9 +7,9 @@ chapterNr = 1
 print_title('A Treasure Hunt Adventure Story')
 print_chapter(chapterNr, 'THE FELLOWSHIP')
 
-cashInGold      = getPersonCashInGold(mainCharacter['cash'])
-rentStuff       = False
-party           = [mainCharacter]
+cashInGold = getPersonCashInGold(mainCharacter['cash'])
+rentStuff = False
+party = [mainCharacter]
 
 if len(mainCharacter['name']) > 0:
     print_colorvars('Er was een jonge avonturier genaamd {} die een schatkaart had gevonden.', [mainCharacter['name']])
