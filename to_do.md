@@ -1,1 +1,1 @@
-adventure met vrienden afmaken
+Huren van paarden en tenten maken
