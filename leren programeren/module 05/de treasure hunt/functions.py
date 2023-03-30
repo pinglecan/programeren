@@ -66,7 +66,13 @@ def getTotalRentalCost(horses:int, tents:int) -> float:
 ##################### M04.D02.O7 #####################
 
 def getItemsAsText(items:list) -> str:
-    pass
+    for entry in items:
+      iets = ''
+      iets += str({entry['amount']})
+      iets += str({entry['unit']})
+      iets += str({entry['name']})
+      print(iets)
+    return iets
 
 def getItemsValueInGold(items:list) -> float:
     pass
