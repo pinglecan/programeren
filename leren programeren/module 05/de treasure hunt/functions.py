@@ -61,8 +61,7 @@ def getNumberOfTentsNeeded(people:int) -> int:
     return math.ceil(people/3)
 
 def getTotalRentalCost(horses:int, tents:int) -> float:
-    som =  math.ceil(COST_TENT_GOLD_PER_WEEK + math.ceil(JOURNEY_IN_DAYS/ 7) * tents ) + math.ceil(silver2gold(COST_HORSE_SILVER_PER_DAY * JOURNEY_IN_DAYS * horses / 2))
-    return som
+    return math.ceil((tents)) * math.ceil((COST_TENT_GOLD_PER_WEEK * math.ceil((JOURNEY_IN_DAYS/ 7)))) + silver2gold( horses *COST_HORSE_SILVER_PER_DAY) * JOURNEY_IN_DAYS 
 
 ##################### M04.D02.O7 #####################
 
