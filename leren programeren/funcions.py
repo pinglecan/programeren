@@ -12,3 +12,10 @@ def clear_console():
     import os
     from turtle import clear
     os.system('cls')
+
+def getFromListByKeyIs(list:list, key:str, value:any) -> list:
+    returnlist = []
+    for entry in range (0,len(list)):
+        if list[entry][key] == value: 
+                returnlist.append(list[entry])
+    return returnlist
