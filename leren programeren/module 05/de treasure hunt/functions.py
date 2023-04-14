@@ -90,25 +90,37 @@ def getItemsValueInGold(items:list) -> float:
             price_in_gold += amount * entry_price['amount']
         elif unit == 'platinum':
             price_in_gold += platinum2gold(amount) * entry_price['amount']
-        else:
-            print('PINGLE YOU MESSED UP')
     return price_in_gold
 
 ##################### M04.D02.O8 #####################
 
 def getCashInGoldFromPeople(people:list) -> float:
-    pass
+    money_in_gold = 0
+    for entry in people:
+        money_in_gold += platinum2gold(entry['cash']['platinum'])
+        money_in_gold += entry['cash']['gold']
+        money_in_gold += silver2gold(entry['cash']['silver'])
+        money_in_gold += copper2gold(entry['cash']['copper'])
+    return money_in_gold
 
 ##################### M04.D02.O9 #####################
 
 def getInterestingInvestors(investors:list) -> list:
-    pass
+    candadates = []
+    for entry in investors:
+        if entry['profitReturn'] <= 10:
+            candadates.append(entry)
+    return candadates
 
 def getAdventuringInvestors(investors:list) -> list:
-    pass
+   return getFromListByKeyIs(investors,'adventuring',True)
 
 def getTotalInvestorsCosts(investors:list, gear:list) -> float:
-    pass
+    people =  getAdventuringInvestors(getInterestingInvestors(investors))
+    rentalCost = getTotalRentalCost(1,1)
+    foodCost = getJourneyFoodCostsInGold(1,1)
+    total = (getItemsValueInGold(gear)  + rentalCost + foodCost) * len(people)
+    return total
 
 ##################### M04.D02.O10 #####################
 
