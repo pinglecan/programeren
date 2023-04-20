@@ -1,4 +1,4 @@
-from math import ceil
+
 
 
 EASY_TEXT = """Ik hou van programmeren. Programmeren is leuk. 
@@ -35,10 +35,11 @@ def getFileContentAsString(textFile: str) -> str:
 
 # opdracht 1
 def getNumberOfCharacters(text: str) -> int:
-    text_without = text.replace('.','')
-    text_without = text_without.replace('?','')
-    text_without = text_without.replace('!','')
-    return len(text_without)
+    count = 0
+    for characters in text:
+        if characters in ALLOWED_IN_WORD:
+            count += 1
+    return count 
 
 # opdracht 2
 def getNumberOfSentences(text: str) -> int:
@@ -49,13 +50,14 @@ def getNumberOfSentences(text: str) -> int:
 
 # opdracht 3
 def getNumberOfWords(text: str) -> int:
-    return len(text.split())
+    return len(text.split(' '))
+
 
 def avi_score(text: str ) -> int:
     words = getNumberOfWords(text)
     sentences = getNumberOfSentences(text)
 
-    gemiddelde = ceil((words + sentences) / 2)
+    gemiddelde = round(words / sentences)
 
     if gemiddelde <= 7:
         avi = 5
@@ -70,3 +72,4 @@ def avi_score(text: str ) -> int:
     elif gemiddelde > 11:
         avi = 12
     return avi
+
