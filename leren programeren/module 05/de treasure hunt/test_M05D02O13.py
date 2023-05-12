@@ -1,6 +1,5 @@
 from functions import print_colorvars
 from functions import getEarnigs
-
 testMainCharacter1 = {
     'name' : 'TestChar1',
     'cash' : {

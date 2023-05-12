@@ -2,7 +2,7 @@ import time
 from termcolor import colored
 from data import *
 import math
-
+import sys
 ##################### M04.D02.O2 #####################
 
 def copper2silver(amount:int) -> float:
@@ -151,7 +151,28 @@ def getAdventurerCut(profitGold:float, investorsCuts:list, fellowship:int) -> fl
 ##################### M04.D02.O13 #####################
 
 def getEarnigs(profitGold:float, mainCharacter:dict, friends:list, investors:list) -> list:
-    pass
+    people = [mainCharacter] + friends + investors
+    
+    earnings = []
+
+    # haal de juiste inhoud op
+    adventuringFriends = [getAdventuringFriends(friends)]
+    interestingInvestors = [getInterestingInvestors(investors)]
+    adventuringInvestors = [getAdventuringInvestors(interestingInvestors)]
+    investorsCuts = [getInvestorsCuts(profitGold,adventuringInvestors)]
+    goldCut = getAdventurerCut(profitGold,investorsCuts,people)
+
+    # verdeel de uitkomsten
+    for person in people:
+        #code aanvullen 
+
+        earnings.append({
+            'name'   : person['name'],
+            'start'  : getPersonCashInGold(person),
+            'end'    : profitGold
+        })
+
+    return earnings
 
 ##################### view functions #####################
 def print_colorvars(txt:str='{}', vars:list=[], color:str='yellow') -> None:
