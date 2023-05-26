@@ -172,7 +172,7 @@ def getEarnigs(profitGold:float, mainCharacter:dict, friends:list, investors:lis
             'end'    : profitGold
         })
 
-    return earnings
+    pass
 
 ##################### view functions #####################
 def print_colorvars(txt:str='{}', vars:list=[], color:str='yellow') -> None:
